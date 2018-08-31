@@ -35,3 +35,9 @@
         }
     }
 </script>
+
+<style>
+    .post-publisher {
+        margin-bottom: 25px;
+    }
+</style>
