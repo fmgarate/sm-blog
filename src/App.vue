@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" aria-label="Toggle navigation" v-on:click="showMenu=!showMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" v-bind:class="{show: showMenu}">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link to="/" class="nav-link">Home</router-link>
+            <router-link to="/" class="nav-link pl-0">Home</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/about" class="nav-link">About</router-link>
@@ -28,6 +28,17 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'app',
+    data() {
+      return {
+        showMenu: false
+      }
+    }
+  }
+</script>
 
 <style>
   body {
